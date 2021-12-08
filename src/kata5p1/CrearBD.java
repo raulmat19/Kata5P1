@@ -24,12 +24,12 @@ public class CrearBD {
     
     public static void createNewTable() {
         // Cadena de conexión SQLite
-        String url = "jdbc:sqlite:mail.db";
+        String url = "jdbc:sqlite:kata5.db";
         
         // Instrucción SQL para crear nueva tabla
-        String sql = "CREATE TABLE IF NOT EXISTS direcc_email (\n"
-                   + " id integer PRIMARY KEY AUTOINCREMENT,\n"
-                   + " direccion text NOT NULL);";
+        String sql = "CREATE TABLE IF NOT EXISTS EMAIL (\n"
+                   + " Id integer PRIMARY KEY AUTOINCREMENT,\n"
+                   + " Mail text NOT NULL);";
         
         try (Connection conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement()) {
